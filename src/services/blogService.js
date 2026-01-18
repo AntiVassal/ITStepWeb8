@@ -6,7 +6,7 @@ export const getPosts = async () => {
 }
 
 export const getPostsByAuthorId = async (userId) => {
-    const response = await fetch(`${baseURL}/posts?${userId}`)
+    const response = await fetch(`${baseURL}/posts?userId=${userId}`)
     return await response.json()
 }
 

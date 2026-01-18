@@ -1,0 +1,14 @@
+.authors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+@media screen AND (max-width: 600px) {
+    .authors {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

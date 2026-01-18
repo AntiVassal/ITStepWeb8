@@ -12,7 +12,8 @@ import { AuthorizedWrapper, NonAuthorizedWrapper } from './components/wrapper/wr
 import { AllPostsComponent } from './components/allPosts.component/allPosts.component.js';
 import { Post } from './components/post.component/post.component.js';
 import { PostPage } from './components/postPage.component/postPage.component.js';
-import { AuthorsComponent } from './components/allPosts.component copy/authors.component.js';
+import { AllAuthorsComponent } from './components/allAuthors.component/allAuthors.component.js';
+import { AllPostsByAuthorComponent } from './components/allPostsByAuthor.component/allPostsByAuthor.component.js';
 
 function App() {
 
@@ -25,7 +26,9 @@ function App() {
           {/* <Route path='/posts/1' Component={Post} />
           <Route path='/posts/2' Component={Post} />
           <Route path='/posts/3' Component={Post} /> */}
-          <Route path='/posts/:postId' Component={PostPage} />
+                  <Route path='/posts/:postId' Component={PostPage} />
+                  <Route path='/authors' Component={AllAuthorsComponent} />
+                  <Route path='/authors/:authorId' Component={AllPostsByAuthorComponent} />
         </Route>
         <Route path='/page-404' Component={NotFoundPageComponent} />
         <Route path='/*' Component={NotFoundPageComponent} />
